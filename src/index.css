@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-emerald-50: var(--color-blue-50);
+  --color-emerald-100: var(--color-blue-100);
+  --color-emerald-200: var(--color-blue-200);
+  --color-emerald-300: var(--color-blue-300);
+  --color-emerald-400: var(--color-blue-400);
+  --color-emerald-500: var(--color-blue-500);
+  --color-emerald-600: var(--color-blue-600);
+  --color-emerald-700: var(--color-blue-700);
+  --color-emerald-800: var(--color-blue-800);
+  --color-emerald-900: var(--color-blue-900);
+  --color-emerald-950: var(--color-blue-950);
+}
+
+@layer base {
+  :root {
+    --font-display: 'Syne', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* UI/UX Pro Max Compositor Motion Utilities */
+.pro-max-card {
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.pro-max-card:hover {
+  transform: translateY(-4px);
+}
+
+.pro-max-btn {
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pro-max-btn:hover {
+  transform: translateY(-1.5px);
+}
+
+.pro-max-btn:active {
+  transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pro-max-card,
+  .pro-max-btn {
+    transition: none !important;
+    transform: none !important;
+  }
+}

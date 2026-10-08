@@ -1,0 +1,6 @@
+{
+  "name": "AFRIKDEV — La communauté des développeurs africains",
+  "description": "Découvrez les talents tech africains, partagez vos projets, trouvez des collaborateurs et construisez les solutions numériques de demain.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
